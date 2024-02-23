@@ -16,9 +16,13 @@ export function listaOsszeallit(LISTA){
 export function tablazatOsszeallit(LISTA){
     let txt="<ul>"
     for( let index=0; index < LISTA.length; index++){
-        txt += `<li>${LISTA[index].nev},${LISTA[index].tel}</li>`
+        txt += "<div class='szemely'>"
+        txt += `<h3>${LISTA[index].nev}</h3>`
+        txt += `<p>${LISTA[index].kor}</p>`
+        txt += `<p>${LISTA[index].tel}</p>`
+        txt += `<p>${LISTA[index].barat}</p>`
+        txt += "</div>"
         }
-        txt+="</ul>"
         console.log(txt)
         return txt
     }
